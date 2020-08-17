@@ -21,13 +21,15 @@ def main():
 	skill_num1 = input("\nChoose a skill from above by entering its number: ")
 	skill_num2 = input("Choose another skill from above by entering its number: ")
 
-	cv['skills'] = (skills_list[int(skill_num1)-1])
-	cv['skills'] = (skills_list[int(skill_num2)-1])
+	cv['skills'] = (skills_list[int(skill_num1)-1], skills_list[int(skill_num2)-1])
+	
 
 	if (int(age) > 25 and int(age) < 40) and int(experience) > 5 and (int(skill_num1) == 6 or  int(skill_num2) == 6):
 		print("You have been accepted, %s" % (name.title()))
 	else:
 		print("You have been rejected, %s" % (name.title()))
+
+	print (cv)
 
 
 if __name__ == '__main__':
